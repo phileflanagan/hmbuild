@@ -1,3 +1,4 @@
+//Base
 *, *:before, *:after {
   padding: 0;
   margin: 0;
@@ -9,3 +10,52 @@
   margin-left: 1rem;
   margin-right: 1rem;
 }
+
+//Colors
+$hblue: #00BCFF; //Thematic Blue
+$cat1: #FF005B;  //Red
+$cat2: #FF962B;  //Orange
+$cat3: #B2E644;  //Green
+$cat4: #521DFF;  //Blue(ish)
+$dgray: #3F3F3F;
+
+//Typography
+@font-face {
+  font-family: futurabold;
+  src: url(../fonts/FuturaStd-Bold.otf);
+}
+
+@font-face {
+  font-family: futuramed;
+  src: url(../fonts/FuturaStd-Bold.otf);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
+
+$headerfont: 'futurabold';
+$bodyfont: 'Cormorant Garamond';
+
+h1,h2,h3,h4,h5,h6 {
+  color: $dgray;
+  font-family: $headerfont;
+}
+div, p, a, ul, ol, li {
+  color: $dgray;
+  font-family: $bodyfont;
+}
+
+a {
+  text-decoration: none;
+  color: $hblue;
+}
+
+.text-primary { color: $hblue; }
+.bg-primary { background-color: $blue; }
+.text-cat1 { color: $cat1; }
+.bg-cat1 { background-color: $cat1; }
+.text-cat2 { color: $cat2; }
+.bg-cat2 { background-color: $cat2; }
+.text-cat3 { color: $cat3; }
+.bg-cat3 { background-color: $cat3; }
+.text-cat4 { color: $cat4; }
+.bg-cat4 { background-color: $cat4; }

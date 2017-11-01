@@ -1,88 +1,14 @@
-//Base
-*, *:before, *:after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.container {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-//Colors
-$hblue: #00BCFF; //Thematic Blue
-$cat1: #FF005B;  //Red
-$cat2: #FF962B;  //Orange
-$cat3: #B2E644;  //Green
-$cat4: #521DFF;  //Blue(ish)
-$dgray: #3F3F3F;
-$lgray: #f3f3f3;
-$offblack: #252525;
-
-//Typography
-@font-face {
-  font-family: futurabold;
-  src: url(../fonts/FuturaStd-Bold.otf);
-}
-
-@font-face {
-  font-family: futuramed;
-  src: url(../fonts/FuturaStd-Medium.otf);
-}
-
-@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond');
-
-$headerfont: 'futurabold';
-$bodyfont: 'Cormorant Garamond';
-
-body {
-  color: $dgray;
-  font-family: $bodyfont;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  color: $dgray;
-  font-family: $headerfont;
-}
-
-footer {
-  font-family: futuramed;
-  font-size: 0.6rem;
-  padding: 0.7rem 0;
-}
-
-footer a {
-  color: inherit;
-}
-
-footer .flexwrap {
-  justify-content: space-between;
-}
-
-.footer-links a{
-  margin-left: 3rem;
-}
-a {
-  text-decoration: none;
-  color: $hblue;
-}
-
-article {
-  line-height: 2;
-}
+@import 'base';
+@import 'fonts';
+@import 'colors';
+@import 'typography';
+@import 'structure';
+@import 'nav';
+@import 'casestudy';
 
 article h3 {
   font-size: 2.4rem;
   margin-bottom: 1rem;
-  text-transform: uppercase;
-}
-
-article {
-  font-size: 1.2rem;
 }
 
 .hero-headline {
@@ -95,41 +21,8 @@ article {
   font-family: $bodyfont;
 }
 
-.text-primary { color: $hblue; }
-.bg-primary { background-color: $hblue; }
-.text-white { color: white; }
-.bg-white { background-color: white; }
-.text-dgray { color: $dgray; }
-.bg-dgray { background-color: $dgray; }
-.text-lgray { color: $lgray; }
-.bg-lgray { background-color: $lgray; }
-.text-offblack { color: $offblack; }
-.bg-offblack { background-color: $offblack; }
-.text-cat1 { color: $cat1; }
-.bg-cat1 { background-color: $cat1; }
-.bg-cat1-50 { background-color: transparentize($cat1, 0.5); }
-.text-cat2 { color: $cat2; }
-.bg-cat2 { background-color: $cat2; }
-.bg-cat2-50 { background-color: transparentize($cat2, 0.5); }
-.text-cat3 { color: $cat3; }
-.bg-cat3 { background-color: $cat3; }
-.bg-cat3-50 { background-color: transparentize($cat3, 0.5); }
-.text-cat4 { color: $cat4; }
-.bg-cat4 { background-color: $cat4; }
-.bg-cat4-50 { background-color: transparentize($cat4, 0.5); }
-
-.hero {
-  min-height: 600px;
-}
-
 .splash {
-  min-height: 700px;
-}
-
-.hero, .splash {
-  max-height: 70vh;
-  height: 100%;
-  display: block;
+  height: 700px;
   background-color: $lgray;
   margin: 2rem 0;
 }
@@ -147,15 +40,11 @@ article {
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-
-.works {
-  justify-content: space-between;
-  padding: 2rem 0;
-}
 .works figure {
   width: 24%;
   padding-bottom: 16%;
-  background-color: #ccc;
+  background-image: url(http://fillmurray.com/300/200);
+  background-size: cover;
   position: relative;
 }
 
@@ -168,20 +57,11 @@ article {
   text-transform: uppercase;
 
 }
-
-.above {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
 .above h4 {
   font-size: 2rem;
   text-transform: uppercase;
 }
 
-
-.flexwrap {
-  display: flex;
-}
 
 .flexwrap > .f50 { width: 50%; }
 
